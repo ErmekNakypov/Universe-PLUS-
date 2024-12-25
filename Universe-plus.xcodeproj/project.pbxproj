@@ -6,13 +6,33 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B41C3B332D14794700469592 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B41C3B322D14794700469592 /* FirebaseAuth */; };
+		B41C3B352D14794700469592 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = B41C3B342D14794700469592 /* FirebaseCore */; };
+		B41C3B372D14794700469592 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B41C3B362D14794700469592 /* FirebaseDatabase */; };
+		B41C3B392D14794700469592 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B41C3B382D14794700469592 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		B41C3AF62D14777300469592 /* Universe-plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universe-plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41C3B3A2D147AF300469592 /* Universe-plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universe-plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B41C3B3C2D147AF300469592 /* Exceptions for "Universe-plus" folder in "Universe-plus" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B41C3AF52D14777300469592 /* Universe-plus */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B41C3AF82D14777300469592 /* Universe-plus */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B41C3B3C2D147AF300469592 /* Exceptions for "Universe-plus" folder in "Universe-plus" target */,
+			);
 			path = "Universe-plus";
 			sourceTree = "<group>";
 		};
@@ -23,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B41C3B372D14794700469592 /* FirebaseDatabase in Frameworks */,
+				B41C3B392D14794700469592 /* FirebaseFirestore in Frameworks */,
+				B41C3B352D14794700469592 /* FirebaseCore in Frameworks */,
+				B41C3B332D14794700469592 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,16 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				B41C3AF82D14777300469592 /* Universe-plus */,
-				B41C3AF72D14777300469592 /* Products */,
+				B41C3B3A2D147AF300469592 /* Universe-plus.app */,
 			);
-			sourceTree = "<group>";
-		};
-		B41C3AF72D14777300469592 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B41C3AF62D14777300469592 /* Universe-plus.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,9 +81,13 @@
 			);
 			name = "Universe-plus";
 			packageProductDependencies = (
+				B41C3B322D14794700469592 /* FirebaseAuth */,
+				B41C3B342D14794700469592 /* FirebaseCore */,
+				B41C3B362D14794700469592 /* FirebaseDatabase */,
+				B41C3B382D14794700469592 /* FirebaseFirestore */,
 			);
 			productName = "Universe-plus";
-			productReference = B41C3AF62D14777300469592 /* Universe-plus.app */;
+			productReference = B41C3B3A2D147AF300469592 /* Universe-plus.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -94,8 +114,11 @@
 			);
 			mainGroup = B41C3AED2D14777200469592;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B41C3B312D14794700469592 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = B41C3AF72D14777300469592 /* Products */;
+			productRefGroup = B41C3AED2D14777200469592;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -254,6 +277,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Universe-plus/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Universe-plus/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -282,6 +306,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Universe-plus/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Universe-plus/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -322,6 +347,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B41C3B312D14794700469592 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B41C3B322D14794700469592 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B41C3B312D14794700469592 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B41C3B342D14794700469592 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B41C3B312D14794700469592 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		B41C3B362D14794700469592 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B41C3B312D14794700469592 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		B41C3B382D14794700469592 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B41C3B312D14794700469592 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B41C3AEE2D14777200469592 /* Project object */;
 }
